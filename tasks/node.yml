@@ -1,0 +1,14 @@
+- name: Node - Install
+  apt:
+    name: ['nodejs', 'npm']
+  tags:
+    - node
+    - install
+
+- name: Node - Install nvm
+  shell: 
+    curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+  tags:
+    - node
+    - install
+

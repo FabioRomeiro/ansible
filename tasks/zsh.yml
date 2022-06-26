@@ -1,0 +1,17 @@
+- name: Zsh - Install 
+  apt: name=zsh
+  tags:
+    - zsh
+    - install
+
+- name: Zsh - Change shell
+  shell: chsh -s `which zsh`
+  tags:
+    - zsh
+    - config
+
+- name: OhMyZsh - Install 
+  shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  tags:
+    - zsh
+    - install

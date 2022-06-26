@@ -1,0 +1,14 @@
+- name: Hyper Terminal - Download 
+  get_url:
+    url="https://releases.hyper.is/download/deb"
+    dest="{{ lookup('env', 'HOME') }}/hyper.deb"
+  tags:
+    - hyper 
+    - install
+
+- name: Hyper Terminal - Install
+  apt: deb="{{ lookup('env', 'HOME') }}/hyper.deb"
+  tags:
+    - hyper 
+    - install
+
